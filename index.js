@@ -1,32 +1,4 @@
 const application = require('./dist');
-var multiparty =  require ( ' multiparty ' );
-var http =  require ( ' http ' );
-var util =  require ( ' util ' );
-
-http . createServer ( function ( req , res ) {
-   if ( req . url  ===  ' / upload '  &&  req . method  ===  ' POST ' ) {
-     // analiza un archivo upload 
-    var form =  new  multiparty.Form ();
-
-    formar . parse (req, function ( err , fields , files ) {
-       res . writeHead ( 200 , { ' content-type ' :  ' text / plain ' });
-       res . write ( ' upload recibida: \ n \ n ' );
-       res . end ( util . inspect ({campos : campos, archivos : archivos}));
-    });
-
-    volver ;
-  }
-
-  // muestra un formulario de carga de archivos 
-  res . writeHead ( 200 , { ' content-type ' :  ' text / html ' });
-  res . end (
-     ' <form action = "/ upload" enctype = "multipart / form-data" method = "post"> ' + 
-    ' <input type = "text" name = "title"> <br> ' + 
-    ' <input type = "file" name = "upload" multiple = "multiple"> <br> ' + 
-    ' <input type = "submit" value = ""'
-    
-  );
-}). escuchar ( 8080 );  
 
 module.exports = application;
 

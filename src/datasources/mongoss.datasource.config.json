@@ -1,0 +1,11 @@
+{
+  "name": "mongoss",
+  "connector": "mongodb",
+  "url": "",
+  "host": "localhost",
+  "port": 27017,
+  "user": "",
+  "password": "",
+  "database": "siempresantander",
+  "useNewUrlParser": true
+}
